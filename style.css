@@ -7,3 +7,12 @@ body {
     border-bottom: 3px solid #008ed6;
     opacity: .8;
 }
+
+#home-section {
+    background-image: url('img/home.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 700px;
+}
+
