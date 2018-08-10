@@ -13,8 +13,8 @@
   <title>Looplab</title>
 </head>
 
-<body>
-  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+<body data-spy="scroll" data-target="#main-nav" id="home">
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark" id="main-nav">
      <div class="container">
       <a class="navbar-brand" href="index.html">LoopLab</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -275,6 +275,27 @@
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
     crossorigin="anonymous"></script>
+    
+  <script>
+    $('body').scrollspy({target: '#main-nav' }); 
+    
+      $('#main-nav a').on('click', function (event) {
+          if (this.hash !== '') {
+              event.preventDefault();
+              
+              const hash = this.hash;
+              
+              $('html, body').animate({
+                  scrollTop: $(hash).offset().top
+              }, 800, function () {
+                window.location.hash = hash;   
+              });
+          }
+      });
+      
+      
+    
+  </script>
 
 </body>
 
