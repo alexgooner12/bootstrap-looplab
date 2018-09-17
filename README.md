@@ -1,2 +1,3 @@
 # bootstrap-looplab
-small bootstrap project
+Fictional social funding website - build with HTML, CSS and Bootstrap 4.
+Course project from Bootstrap 4 by Brad Traversy.
